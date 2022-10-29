@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CYF - HTML & CSS - Week 02 - HTML Forms</title>
+</head>
+<body>
+    <div id="app-container">
+
+        <h3>CYF - HTML & CSS - Week 02 - HTML Forms</h3>
+
+        <h1>🍕 Order Your Pizza</h1>
+
+        <form class="orderForm">
+
+            <div class="customer-name">
+                <div class="name-input">
+                    <label for="first">First Name:</label>
+                    <input type="text" name="first_name" id="first" required minLength="2" maxLength="20" />
+                </div>
+                <div class="name-input">
+                    <label for="last">Last Name:</label>
+                    <input type="text" name="last_name" id="last" required />  
+                </div>
+            </div>
+
+            <div class="customer-email">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="heat-level-selection">
+                <span>🌶️ Choose the heat level:</span>
+                <div class="heat-level-option">
+                    <label for="spicy">Spicy</label>
+                    <input type="radio" value="spicy" name="heat_level" id="spicy" required>
+                </div>
+                <div class="heat-level-option">
+                    <label for="medium">Medium</label>
+                    <input type="radio" value="medium" name="heat_level" id="medium" required>
+                </div>
+                <div class="heat-level-option">
+                    <label for="regular">Regular</label>
+                    <input type="radio" value="regular" name="heat_level" id="regular" required>
+                </div>
+            </div>
+
+            <div class="toppings-selection">
+                <span>🍍 Choose the toppings:</span>
+                <div class="topping-checkbox">
+                    <label for="ham">Ham</label>
+                    <input type="checkbox" name="" id="ham">
+                </div>
+                <div class="topping-checkbox">
+                    <label for="pineapple">Pineapple</label>
+                    <input type="checkbox" name="" id="pineapple">
+                </div>
+                <div class="topping-checkbox">
+                    <label for="pepperoni">Pepperoni</label>
+                    <input type="checkbox" name="" id="pepperoni">
+                </div>
+                <div class="topping-checkbox">
+                    <label for="extra-cheese">Extra Cheese</label>
+                    <input type="checkbox" name="" id="extra-cheese">
+                </div>
+            </div>
+
+            <div class="size-selection">
+                <span>Choose the size:</span>
+                <select name="pizza_size" id="size" required>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                </select>
+            </div>
+
+            <div class="amount-number">
+                <span>Number of pizzas:</span>
+                <input type="number" min="1" max="5" required>
+            </div>
+
+            <div class="special-requests">
+                <label for="requests">Any special requests:</label>
+                <textarea name="sepcial_requests" id="requests"></textarea>
+            </div>
+
+            <!-- name is sent to the backend to understand where the form was sent from -->
+            <!-- <input type="hidden" name="OrderPizzaPage"> -->
+
+            <!-- https://web3forms.com/ -->
+            <input type="hidden" name="access_key" value="7b4fecad-7fb7-497c-9587-a5e70f048627">
+
+            <button type="submit" class="submit-button">Send Us Your Order</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
